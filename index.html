@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini music player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css"> 
+
+</head>
+<body>
+    <div id="heading">
+        <header id="appHeader">
+            <div id="theme">
+               <div id="themeButton">
+                 <div id="switchButton"></div>
+               </div>
+            </div>
+            <div>
+                <h1 style="text-align: center;">Music Player</h1>
+            </div>
+        </header>
+    </div>
+    <div id="container">
+        <div class="all-song">
+            <div>
+                <label for="genreOption">Filter by genre:</label>
+                <select name="genreOption" id="genreOption">
+                    <option value="all" selected>All songs</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                </select>
+            </div>
+            <div>
+                <h3 style="margin-top:20px;">All Songs</h3>
+                <div id="displaySongs"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="songDetails">
+                <div class="songImg"></div>
+                <div class="songName"></div>
+                <div class="artistName"></div>
+            </div>
+            <div class="songControler">
+                <div id="audioControler"></div>
+                <div class="controlButton">
+                    <button class="leftButton">
+                        <i class="fa-solid fa-angles-left"></i>
+                    </button>
+                    <button class="rightButton">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </button>
+                </div>
+                <div class="addToPlayListButton">
+                    <button>Add To Playlist</button>
+                </div>
+            </div>
+        </div>
+        <div class="playlist">
+            <input type="text" id="playlistInput" placeholder="Enter Playlist Name...">
+            <input type="submit" id="playlistSubmit" value="Create Playlist">
+            <h3>Current Playlist</h3>
+            <div id="CurrentPlaylist"></div>
+            <h3>All Playlist</h3>
+            <div id="showPlayList">
+            </div>
+        </div>
+        
+    </div>
+    <script src="theme.js"></script>
+    <script src="playlist.js"></script>
+    <!-- <script src="songList.js"></script> -->
+    <script type="module" src="card.js"></script>
+    
+</body>
+</html>
